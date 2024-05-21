@@ -6,7 +6,7 @@ import RootNavigator from './src/navigators';
 const App = () => {
   return (
     <SafeAreaProvider>
-      <StatusBar barStyle={true ? 'light-content' : 'dark-content'} />
+      <StatusBar barStyle={true ? 'dark-content' : 'light-content'} />
       <RootNavigator />
     </SafeAreaProvider>
   );

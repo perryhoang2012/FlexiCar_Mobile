@@ -8,6 +8,8 @@ import LoginScreen from '~screens/LoginScreen/LoginScreen';
 import DarkTheme from '../themes/DarkTheme';
 import DefaultTheme from '../themes/DefaultTheme';
 import useGeneralStore from '../store/useGeneralStore';
+import SplashScreen from '~screens/SplashScreen/SplashScreen';
+import BottomTabNavigator from './BottomTabNavigator';
 
 const RootNavigator = () => {
   const RootStack = createNativeStackNavigator<RootStackParamList>();
@@ -18,10 +20,12 @@ const RootNavigator = () => {
     <NavigationContainer
       theme={generalState.isDarkMode ? DarkTheme : DefaultTheme}>
       <RootStack.Navigator
-        initialRouteName="Home"
+        initialRouteName="BottomTab"
         screenOptions={{headerShown: false}}>
         <RootStack.Screen name="Home" component={HomeScreen} />
         <RootStack.Screen name="Login" component={LoginScreen} />
+        <RootStack.Screen name="Splash" component={SplashScreen} />
+        <RootStack.Screen name="BottomTab" component={BottomTabNavigator} />
       </RootStack.Navigator>
     </NavigationContainer>
   );

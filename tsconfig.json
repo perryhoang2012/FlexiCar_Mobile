@@ -1,20 +1,20 @@
 {
   "extends": "@tsconfig/react-native/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./src/",
+    "skipLibCheck": true,
     "paths": {
-      "~": ["src/*"],
-      "~assets/*": ["src/assets/*"],
-      "~apis/*": ["src/apis/*"],
-      "~models/*": ["src/models/*"],
-      "~components/*": ["src/components/*"],
-      "~hooks/*": ["src/hooks/*"],
-      "~navigators/*": ["src/navigators/*"],
-      "~redux/*": ["src/redux/*"],
-      "~screens/*": ["src/screens/*"],
-      "~themes/*": ["src/themes/*"],
-      "~untils/*": ["src/untils/*"],
-      "~store/*": ["src/store/*"]
+      "~assets/*": ["assets/*"],
+      "~apis/*": ["apis/*"],
+      "~models/*": ["models/*"],
+      "~components/*": ["components/*"],
+      "~hooks/*": ["hooks/*"],
+      "~navigators/*": ["navigators/*"],
+      "~redux/*": ["redux/*"],
+      "~screens/*": ["screens/*"],
+      "~themes/*": ["themes/*"],
+      "~untils/*": ["untils/*"],
+      "~store/*": ["store/*"]
     }
   },
   "include": ["src"]
