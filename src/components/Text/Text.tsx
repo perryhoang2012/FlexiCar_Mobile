@@ -1,6 +1,7 @@
 import {useTheme} from '@react-navigation/native';
 import {Platform, Text as TextBase} from 'react-native';
 import {styles} from './Text.styles';
+import {moderateScale} from '../../untils/scaling';
 
 export interface Props {
   flex?: boolean;
@@ -92,7 +93,7 @@ const Text: React.FC<Props> = props => {
     weight && {
       fontWeight: weight === 'bold' && Platform.OS === 'ios' ? '500' : weight,
     },
-    size && {fontSize: size},
+    size && {fontSize: moderateScale({size})},
     italic && {fontStyle: 'italic'},
     style,
   ];
