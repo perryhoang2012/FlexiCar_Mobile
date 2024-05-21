@@ -8,6 +8,7 @@ import LoginScreen from '~screens/LoginScreen/LoginScreen';
 import DarkTheme from '../themes/DarkTheme';
 import DefaultTheme from '../themes/DefaultTheme';
 import useGeneralStore from '../store/useGeneralStore';
+import SplashScreen from '~screens/SplashScreen/SplashScreen';
 
 const RootNavigator = () => {
   const RootStack = createNativeStackNavigator<RootStackParamList>();
@@ -22,6 +23,7 @@ const RootNavigator = () => {
         screenOptions={{headerShown: false}}>
         <RootStack.Screen name="Home" component={HomeScreen} />
         <RootStack.Screen name="Login" component={LoginScreen} />
+        <RootStack.Screen name="Splash" component={SplashScreen} />
       </RootStack.Navigator>
     </NavigationContainer>
   );
